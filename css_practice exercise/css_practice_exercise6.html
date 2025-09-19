@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail Layout </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .gen-container {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin: 10px;
+    }
+
+    .header nav a {
+      color: #ffda79;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f4f4f4;
+    }
+
+    .sidebar {
+      background: #ddd;
+      padding: 1rem;
+      flex: 0 0 200px; /* fixed width for sidebars */
+      border-radius: 5px;
+    }
+
+    .main {
+      background: white;
+      padding: 1rem;
+      flex: 1; /* grow to fill available space */
+      border-radius: 5px;
+    }
+
+    .post {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-left: 4px solid #333;
+    }
+
+    form input, form button {
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #555;
+    }
+
+    .footer a {
+      color: #ffda79;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex: none;
+        width: 100%;
+      }
+    }
+
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gen-container">
+    <Header>
+        <div class="header-container">
+            <div class="banner">
+            <img src="https://via.placeholder.com/1200x300?text=Mariam%27s+BCloset+Banner" alt="Mariam's BCloset Fashion Banner">
+            </div>
+
+            <div class="header">
+            <h1>Mariam’s BCloset</h1>
+            <nav>
+            <a href="#">Home</a> | 
+            <a href="#">About</a> | 
+            <a href="#">Shop</a> | 
+            <a href="#">Contact</a>
+            </nav>
+            </div>
+        </div>
+    </Header>
+    
+    <!-- Container with 3 columns -->
+    <div class="container">
+    <!-- Left Sidebar -->
+    <div class="sidebar left">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h2>Welcome to Mariam’s BCloset</h2>
+      <p>Mariam’s BCloset is your go-to space for stylish, timeless fashion that blends creativity with elegance. Explore the latest collections, style tips, and updates right here.</p>
+
+      <div class="post">
+        <h3>Latest Article: The Power of Timeless Style</h3>
+        <p>At Mariam’s BCloset, we believe fashion should be more than just trends—it should tell a story. Our newest collection celebrates pieces that remain stylish across seasons, making them worthy investments for every wardrobe. From carefully tailored jackets to vibrant aso-oke accents, our designs let you express confidence and individuality.</p>
+      </div>
+
+      <div class="post">
+        <h3>Another Post: Behind the Scenes at Mariam’s BCloset</h3>
+        <p>Every outfit at Mariam’s BCloset begins with an idea, a sketch, and a passion for detail. Our creative process combines traditional craftsmanship with modern flair. Whether it’s sourcing premium fabrics or testing new styles, we work to ensure that each piece speaks to both quality and originality. Stay tuned for exclusive sneak peeks and upcoming fashion events.</p>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar right">
+      <h2>Updates</h2>
+      <p>Subscribe to our newsletter for the latest news.</p>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+   <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Mariam’s BCloset | Follow us: 
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </div>
+
+</div>
+  
+</body>
+</html>

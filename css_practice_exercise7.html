@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poultry Inventory Dashboard</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      transition: color 0.3s;
+    }
+    .navbar .menu a:hover {
+      color: #f1c40f;
+    }
+
+    /* 🔹 Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #27ae60;
+      color: white;
+      text-align: center;
+      height: 200px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* 🔹 Main Content */
+    .main {
+      display: flex;
+      min-height: 400px;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1;
+      background: #ecf0f1;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .sidebar li {
+      padding: 0.5rem 0;
+      cursor: pointer;
+    }
+    .sidebar li:hover {
+      color: #27ae60;
+    }
+
+    /* Content */
+    .content {
+      flex: 3;
+      padding: 1rem;
+    }
+    .cards {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .card {
+      flex: 1;
+      min-width: 220px;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 🔹 Footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #2c3e50;
+      color: white;
+      padding: 2rem;
+    }
+    .footer-col {
+      flex: 1;
+      margin: 0 1rem;
+      min-width: 200px;
+    }
+    .footer-col h3 {
+      margin-bottom: 1rem;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-col a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-col a:hover {
+      color: #27ae60;
+    }
+
+    /* 🔹 Responsive Design */
+    @media (max-width: 900px) {
+      .main {
+        flex-direction: column;
+      }
+      .sidebar {
+        order: 2;
+      }
+      .content {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        flex-direction: column;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar .menu a {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Top Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">🐓 Poultry Inventory</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Reports</a>
+      <a href="#">Stock</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <!-- 🔹 Hero Section -->
+  <section class="hero">
+    <h1>AgriNest</h1>
+    <p>Manage your poultry stock, monitor production, and track sales easily.</p>
+  </section>
+
+  <!-- 🔹 Main Content Area -->
+  <div class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Inventory Menu</h2>
+      <ul>
+        <li>🐥 Chicks</li>
+        <li>🥚 Egg Stock</li>
+        <li>🍗 Meat Production</li>
+        <li>💰 Sales Records</li>
+        <li>⚙ Settings</li>
+      </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <h2>Poultry Overview</h2>
+
+      <!-- Cards Section -->
+      <div class="cards">
+        <div class="card">Total Birds<br><strong>1,200</strong></div>
+        <div class="card">Eggs Collected<br><strong>3,450</strong></div>
+        <div class="card">Meat Processed<br><strong>850 kg</strong></div>
+        <div class="card">Monthly Sales<br><strong>$5,600</strong></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <div class="footer-col">
+      <h3>About</h3>
+      <p>Poultry Inventory helps farmers manage birds, eggs, meat, and sales with ease.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Email: farm@poultry.com</p>
+      <p>Phone: +234 800 123 4567</p>
+    </div>
+  </footer>
+
+</body>
+</html>
